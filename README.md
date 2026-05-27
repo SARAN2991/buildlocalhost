@@ -1,35 +1,3 @@
-# 🚀 Get Started
-
-**This repo is where attendees go to continue their learning after your session — and your Copilot agent will help you set it up.**
-
-### Step 1: Open your repo
-
-Open this repo in a **Codespace** (click the green **Code** button → **Create a Codespace**) — or clone it locally. Then open **GitHub Copilot Chat**.
-
-### Step 2: Add your content
-
-Give the agent something to work with. Drag files into the Explorer panel — session abstracts, outlines, screenshots, notes — and drop them in one of two places:
-
-| Where to put it | What goes there | Who sees it |
-|---|---|---|
-| **`_remove-before-publish/`** | Internal reference materials (abstracts, outlines, screenshots, planning docs) | **Copilot only** — never published |
-| **`/docs/`, `/src/`, or repo root** | Lab instructions, demo code, sample data, getting-started guides | **Attendees** — published with the repo |
-
-> 💡 Not sure? Start by dropping your session abstract or outline into `_remove-before-publish/`. The agent will figure out what to do with it.
-
-### Step 3: Ask the Agent
-
-Once your content is in the repo, use these three phrases with Copilot to build out your session repo:
-
-| Phrase to use with Copilot | What it does | When to run it |
-|---|---|---|
-| **"Help me get started"** | Sets up session title, description, outcomes, and owners | After you've added your session abstract or outline to the repo |
-| **"Help me refine content"** | Organizes your session content into the repo | Each time you add or update content |
-| **"Help me finalize"** | Final review, cleanup, and publication prep | When you're ready to publish |
-
-> 💡 **These three phrases are just the starting point.** Copilot can do much more — try asking it to brainstorm next steps for attendees, generate code samples, or build out your repo structure. Don't be afraid to put it in plan mode and ask for what you need.
-
----
 
 <a name="start-building"></a>
 <br>
@@ -39,67 +7,110 @@ Once your content is in the repo, use these three phrases with Copilot to build 
 
 # [Microsoft Build 2026](https://build.microsoft.com)
 
-## 🔥 BRKXXX: SESSION TITLE
+## BRK230: Build Smarter AI Systems in Foundry as Models and Costs Evolve
 
 ### Session Description
 
-*Add Session Description*
+Model lifecycles are now measured in months, sometimes weeks, and production agents need multiple models for different jobs. "Which model should I use?" is the wrong question. The right question is: *how do I build an AI system that keeps getting smarter, faster, safer, and more cost-efficient as models evolve?*
+
+This session walks through that system-design problem end-to-end using **Microsoft Foundry**. We follow Carmen, an employee booking a multi-step business trip, and decompose a single user request into the jobs a production agent actually has to do: routing intent, reading a receipt image, answering a policy question, planning the trip, and calling tools. For each job, we show how to pick, evaluate, route, fine-tune, and operate the right model.
+
+The session is organized around four challenges every AI developer faces:
+
+1. **Select**: *"Which model fits my task?"* Browse over 11,000 models in the Foundry catalog (Azure OpenAI, Claude, MAI, DeepSeek, Mistral, Grok, Llama, Cohere, Fireworks AI, and more) and shortlist candidates.
+2. **Evaluate**: *"Is the model getting better?"* Define quality, latency, and cost criteria, then compare models side by side on your own data with built-in and custom evaluators.
+3. **Optimize**: *"How do I reduce cost?"* Apply model routing, prompt caching, batch inference, provisioned throughput, structured outputs, and distillation or fine-tuning to cut cost without losing quality.
+4. **Operate**: *"Will it hold up in production?"* Deploy with managed endpoints, versioning, rollback, monitoring, responsible AI guardrails, and governance.
+
+The end result in the demo: **74% lower cost, 12% lower latency, and 10% higher quality** compared to a naive "one frontier model for everything" baseline. After distillation, the policy slice drops further to roughly one-third the cost at half the latency.
 
 ### 🏫 Getting started in a guided session
 
 To get started in a guided lab session:
-- <!-- step 1 -->
-- <!-- step 2 -->
-- <!-- step 3 -->
+- Sit back and follow along as the speakers walk through the Carmen travel agent scenario across the four acts (Select, Evaluate, Optimize, and Operate).
+- Open the companion hands-on labs at [github.com/microsoft-foundry/model-releases](https://github.com/microsoft-foundry/model-releases) in a second browser tab so you can run the demos yourself afterwards.
+- Bookmark this repo (`aka.ms/build/BRK230`). It is where the slides, demo code, and follow-up resources live.
 
 ### 🏠 Getting started in your own environment
 
-If you're following these steps at your own pace:
-- Clone this repository
-- Set up your development environment
-- <!-- step 3 -->
+If you are following these steps at your own pace:
+- Clone this repository.
+- Create a Microsoft Foundry project at [ai.azure.com](https://ai.azure.com). The free tier works for most demos.
+- Clone the hands-on labs repo with `git clone https://github.com/microsoft-foundry/model-releases.git`. Every demo from this session lives there, organized by model release and scenario.
+- Pick a lab that matches the act you are interested in (model selection, evaluation, routing, or fine-tuning) and follow its README.
 
 ### 🧠 Learning Outcomes
 
 By the end of this session, you will be able to:
 
-- <!-- outcome 1 -->
-- <!-- outcome 2 -->
-- <!-- outcome 3 -->
+- Reframe model selection from a one-time decision into a continuous **system-design** problem with both an agent loop and a model loop.
+- Decompose a user request into discrete **jobs to be done** and map each job to the right model tier (nano, mini, or frontier) instead of overusing a single frontier model.
+- Build an **evaluation harness** in Foundry by defining quality, latency, and cost criteria, generating synthetic eval data, and comparing models side by side with quality, risk and safety, and agent evaluators.
+- Apply the full **cost optimization stack**: model router, prompt and semantic caching, structured outputs, batch inference, provisioned throughput, and fine-tuning or distillation.
+- Use **distillation** (teacher to student fine-tuning) to get frontier-quality answers at small-model cost and latency.
+- **Operate** a production AI system with managed deployments, versioning, rollback, monitoring, content safety, and governance.
 
 ### 💬 Keep Learning with Copilot
 
-Try these prompts with GitHub Copilot to explore the topics from this session. Open Copilot Chat in VS Code (`Ctrl+Alt+I` on Windows/Linux, `Cmd+Shift+I` on Mac), paste a prompt, and see what you learn. Try connecting the [Microsoft Learn MCP Server](#-microsoft-learn-mcp-server) for the latest official documentation.
+Try these prompts with GitHub Copilot to explore the topics from this session. Open Copilot Chat in VS Code (`Ctrl+Alt+I` on Windows or Linux, `Cmd+Shift+I` on Mac), paste a prompt, and see what you learn. Try connecting the [Microsoft Learn MCP Server](#-microsoft-learn-mcp-server) for the latest official documentation.
 
-Use these as a starting point — or write your own!
+Use these as a starting point, or write your own:
 
-<!-- Prompts will be tailored to this session's content during repo setup. -->
-
-> *Prompts coming soon — check back after the session content is finalized.*
+- *"Explain the difference between an **agent loop** and a **model loop** in Microsoft Foundry, and when I should invest in each."*
+- *"I have a multi-step agent using one frontier model for every call. Walk me through how to **decompose the workload into jobs to be done** and pick a cheaper model tier for each."*
+- *"Show me how to set up an **evaluation run in Microsoft Foundry** that compares two models on quality, latency, and cost using my own dataset."*
+- *"What is **knowledge distillation**, and how would I use a teacher model in Foundry to fine-tune a smaller student model for a policy Q&A task?"*
+- *"Compare **prompt caching**, **semantic caching**, **batch inference**, **provisioned throughput**, and **model router** in Foundry. When should I use each one to reduce cost?"*
+- *"Generate a checklist for taking an AI agent to production on Foundry that covers monitoring, versioning, rollback, content safety, and governance."*
 
 ### 💻 Technologies Used
 
-1. <!-- technology 1 -->
-1. <!-- technology 2 -->
-1. <!-- technology 3 -->
+1. **Microsoft Foundry**: the AI app and agent factory, covering Models, Agent Service, IQ, Tools, Evaluations, and the deployment and governance control plane.
+1. **Foundry Models catalog**: over 11,000 models including **Azure OpenAI** (GPT-4.1, GPT-4.1-mini, GPT-4.1-nano), **Claude in Microsoft Foundry** (Opus 4.7, Sonnet 4.6, Haiku 4.5), **MAI models** (MAI-Thinking-1, MAI-Image-2.5, MAI-Code-1, MAI-Voice-2, MAI-Transcribe-1.5), **DeepSeek**, **Mistral**, **Grok**, **Llama**, **Cohere**, **Black Forest Labs**, **Fireworks AI**, **Hugging Face**, and **NVIDIA**.
+1. **Foundry Evaluations**: quality, risk and safety, and agent evaluators, plus custom evaluators.
+1. **Model Router**, **prompt caching**, **semantic caching**, **structured outputs**, **global batch**, **provisioned throughput (PTU)**, and **priority processing** for cost and latency optimization.
+1. **Fine-tuning and distillation** workflows (SFT, DPO, RLHF) in Foundry.
+1. **Responsible AI** content filters, jailbreak protections, and PII handling, with **Agent 365** for governance.
 
 ### 📚 Resources and Next Steps
 
 | Resource | Description |
 |:---------|:------------|
-| [https://aka.ms/build26-next-steps](https://aka.ms/build26-next-steps) | Explore lab and session repos to further your learning from Microsoft Build |
+| [**microsoft-foundry/model-releases**](https://github.com/microsoft-foundry/model-releases) | 🧪 **Hands-on labs for every demo in this session.** Samples for Microsoft Foundry model releases, assembled into partner workshops for active skilling across model selection, evaluation, routing, and distillation. |
+| [ai.azure.com](https://ai.azure.com) | Start building with Microsoft Foundry. |
+| [aka.ms/ClaudeGAonFoundry](https://aka.ms/ClaudeGAonFoundry) | Claude in Microsoft Foundry: General Availability (Opus 4.7, Sonnet 4.6, Haiku 4.5). |
+| [aka.ms/MAIonFoundry](https://aka.ms/MAIonFoundry) | The 9 MAI models announced at Build 2026 (Thinking, Image, Code, Voice, Transcribe). |
+| [aka.ms/ai/discord](https://aka.ms/ai/discord) | Join the Microsoft AI Discord community. |
+| [aka.ms/build/BRK230](https://aka.ms/build/BRK230) | Slides and recording for this session. |
+| [Microsoft Foundry documentation](https://learn.microsoft.com/azure/ai-foundry/) | Official docs for models, agents, evaluations, fine-tuning, and deployment. |
+| [https://aka.ms/build26-next-steps](https://aka.ms/build26-next-steps) | Explore lab and session repos to further your learning from Microsoft Build. |
+
+#### Related Build 2026 sessions
+
+| Session | Title |
+|:--------|:------|
+| **DEM322 / DEM320** | Smaller, faster, smarter: Distilling agents with fine-tuning |
+| **DEM323** | Under the hood of MAI-2 |
+| **BRK241** | From prototype to production: build and run agents at scale |
+| **BRK231** | Deploy. Observe. Learn. Reinforcement learning for production agents |
+| **BRK252** | From observability to ROI for AI agents on any framework |
+| **BRK250** | Govern open-source AI agents, any framework, any scale |
+| **BRK251** | Build secure and enterprise-ready agents with Agent 365 |
+| **BRK246** | Context engineering for agents: connect agents with enterprise knowledge |
+| **BRK242** | Turn your agents into action: connect tools, APIs, and data |
+| **BRK232** | Train and deploy custom OSS reasoning models with Foundry |
 
 
 ### 🌟 Microsoft Learn MCP Server
 
-The Microsoft Learn MCP Server gives your AI agent direct access to Microsoft's official documentation — grounded, up-to-date answers about the products and services covered in this session.
+The Microsoft Learn MCP Server gives your AI agent direct access to Microsoft's official documentation, providing grounded, up-to-date answers about the products and services covered in this session.
 
-**VS Code** — One click installation: 
+**VS Code** one-click installation: 
 
 [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_Microsoft_Learn_MCP-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://vscode.dev/redirect/mcp/install?name=microsoft-learn&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Flearn.microsoft.com%2Fapi%2Fmcp%22%7D)
 
 
-**GitHub Copilot CLI** — Run this to install the Learn MCP Server as a plugin:
+**GitHub Copilot CLI**: run this to install the Learn MCP Server as a plugin:
 ```
 /plugin install microsoftdocs/mcp
 ```
@@ -115,10 +126,15 @@ For more info, other clients, and to post questions, visit the [Learn MCP Server
 
 <table>
 <tr>
-    <td align="center"><a href="http://github.com/yourGitHubHandle">
-        <img src="https://github.com/yourGitHubHandle.png" width="100px;" alt="INSERT NAME HERE"/><br />
-        <sub><b>INSERT NAME HERE</b></sub></a><br />
-            <a href="https://github.com/yourGitHubHandle" title="talk">📢</a>
+    <td align="center"><a href="https://github.com/yinaarenas">
+        <img src="https://github.com/yinaarenas.png" width="100px;" alt="Yina Arenas"/><br />
+        <sub><b>Yina Arenas</b><br/>Corporate Vice President, Microsoft Foundry</sub></a><br />
+            <a href="https://github.com/yinaarenas" title="talk">📢</a>
+    </td>
+    <td align="center"><a href="https://github.com/nmoneypenny">
+        <img src="https://github.com/nmoneypenny.png" width="100px;" alt="Naomi Moneypenny"/><br />
+        <sub><b>Naomi Moneypenny</b><br/>GPM, Foundry Models</sub></a><br />
+            <a href="https://github.com/nmoneypenny" title="talk">📢</a>
     </td>
 </tr></table>
 
