@@ -126,13 +126,13 @@ For more info, other clients, and to post questions, visit the [Learn MCP Server
 
 <table>
 <tr>
-    <td align="center"><a href="https://github.com/yinaarenas">
-        <img src="https://github.com/yinaarenas.png" width="100px;" alt="Yina Arenas"/><br />
+    <td align="center"><a href="https://github.com/yinaa">
+        <img src="https://github.com/yinaa.png" width="100px;" alt="Yina Arenas"/><br />
         <sub><b>Yina Arenas</b><br/>Corporate Vice President, Microsoft Foundry</sub></a><br />
             <a href="https://github.com/yinaarenas" title="talk">📢</a>
     </td>
-    <td align="center"><a href="https://github.com/nmoneypenny">
-        <img src="https://github.com/nmoneypenny.png" width="100px;" alt="Naomi Moneypenny"/><br />
+    <td align="center"><a href="https://github.com/naomimoneypenny">
+        <img src="https://github.com/naomimoneypenny.png" width="100px;" alt="Naomi Moneypenny"/><br />
         <sub><b>Naomi Moneypenny</b><br/>GPM, Foundry Models</sub></a><br />
             <a href="https://github.com/nmoneypenny" title="talk">📢</a>
     </td>
