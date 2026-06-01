@@ -9,11 +9,31 @@
 
 ## BRK230: Build Smarter AI Systems in Foundry as Models and Costs Evolve
 
-### Session Description
+## Session Description
 
-Model lifecycles are now measured in months, sometimes weeks, and production agents need multiple models for different jobs. "Which model should I use?" is the wrong question. The right question is: *how do I build an AI system that keeps getting smarter, faster, safer, and more cost-efficient as models evolve?*
+Discover how to quickly choose, integrate, and validate AI models inside Microsoft Foundry. Learn techniques for navigating thousands of model options, benchmarking performance, and streamlining your workflow with deep IDE support. Build faster, ship smarter, and stay on top of the evolving AI landscape.
 
-This session walks through that system-design problem end-to-end using **Microsoft Foundry**. We follow Carmen, an employee booking a multi-step business trip, and decompose a single user request into the jobs a production agent actually has to do: routing intent, reading a receipt image, answering a policy question, planning the trip, and calling tools. For each job, we show how to pick, evaluate, route, fine-tune, and operate the right model.
+---
+
+## Introduction
+
+Model lifecycles are now measured in months, sometimes weeks, and production agents need to deploy and use multiple models to get the right fit for each task.
+
+_"What model should I use?"_ is the wrong question to ask. Instead, the right question is: _"How do I build an AI system that keeps getting smarter, faster, safer, and more cost-efficient as models evolve?"_
+
+In this session, walk through the developer's workflow as they tackle that system-design problem from the initial plan to the final deployed product.
+
+## Scenario: Compliant Trip Planning
+
+_World Wide Importers_ is a fictitious enterprise company that requires its employees to travel all over the world to conduct business. They have complex travel policies that need to be taken into account when making plans and submitting expenses. So they decided to build a _Travel Concierge_, an AI assistant that can help employees handle travel planning and expenses in a compliant way.
+
+**Scenario:** Carmen is a World Wide Importers employee who travels frequently. This is what her request looks like:
+
+> "I need to fly to Berlin next Monday for a client meeting. Book my flight tickets, find me a hotel near Alexanderplatz, and make sure you stay within my company's travel policy. Also, check if you can expense my parking tickets — I have attached my parking receipts."
+
+This demo walks through that system-design problem end-to-end using **Microsoft Foundry**. We follow Carmen's request — decomposing it into the jobs a production agent actually has to do: routing intent, reading a receipt image, answering a policy question, planning the trip, and calling tools. For each job, we show how to pick, evaluate, route, fine-tune, and operate the right model.
+
+## Developer Challenges
 
 The session is organized around four challenges every AI developer faces:
 
@@ -22,24 +42,43 @@ The session is organized around four challenges every AI developer faces:
 3. **Optimize**: *"How do I reduce cost?"* Apply model routing, prompt caching, batch inference, provisioned throughput, structured outputs, and distillation or fine-tuning to cut cost without losing quality.
 4. **Operate**: *"Will it hold up in production?"* Deploy with managed endpoints, versioning, rollback, monitoring, responsible AI guardrails, and governance.
 
+Watch as we iteratively reduce the cost and latency, while improving the quality of responses, using a series of Microsoft Foundry tools and capabilities.
+
 The end result in the demo: **74% lower cost, 12% lower latency, and 10% higher quality** compared to a naive "one frontier model for everything" baseline. After distillation, the policy slice drops further to roughly one-third the cost at half the latency.
 
-### 🏫 Getting started in a guided session
+## Try It Yourself: Hands-on Workshop
 
-To get started in a guided lab session:
-- Sit back and follow along as the speakers walk through the Carmen travel agent scenario across the four acts (Select, Evaluate, Optimize, and Operate).
-- Open the companion hands-on labs at [github.com/microsoft-foundry/model-releases](https://github.com/microsoft-foundry/model-releases) in a second browser tab so you can run the demos yourself afterwards.
-- Bookmark this repo (`aka.ms/build/BRK230`). It is where the slides, demo code, and follow-up resources live.
+The demo was built using a [hands-on workshop](https://github.com/microsoft-foundry/model-releases) that you can step through to build your own intuition for this hill-climbing journey. The repository is instrumented with both workshop _skills_ and a _replay agent_ to help you explore ideas with an AI coding agent.
 
-### 🏠 Getting started in your own environment
+### 1. Getting Started
 
-If you are following these steps at your own pace:
-- Clone this repository.
-- Create a Microsoft Foundry project at [ai.azure.com](https://ai.azure.com). The free tier works for most demos.
-- Clone the hands-on labs repo with `git clone https://github.com/microsoft-foundry/model-releases.git`. Every demo from this session lives there, organized by model release and scenario.
-- Pick a lab that matches the act you are interested in (model selection, evaluation, routing, or fine-tuning) and follow its README.
+1. Fork [the model-releases repo](https://github.com/microsoft-foundry/model-releases) to your own GitHub profile.
+1. Launch GitHub Codespaces on your fork to get a pre-built development environment for a fast start.
 
-### 🧠 Learning Outcomes
+### 2. Do The Workshop
+
+Open the GitHub Copilot Chat sidebar and select a good model (we recommend Claude Sonnet 4.6 or Claude Opus 4.7 to start). Then use this prompt to activate Copilot Chat with the workshop:
+
+```
+run the foundry e2e workshop
+```
+
+### 3. Replay Session Demo
+
+We saved all the traces from the run we used to build the breakout demo into a series of data files. Then we wrote an agent that can "replay" the session, so you can see each step with the relevant commands and outcomes. To try this out:
+
+1. Click the "Agent" option in the Copilot Chat window.
+1. Select the "BRK Demo Replay" agent.
+
+Then use this prompt to activate Copilot Chat and have it run the demo for you:
+
+```bash
+run the session demo
+```
+
+<br/>
+
+## Learning Outcomes
 
 By the end of this session, you will be able to:
 
@@ -50,9 +89,11 @@ By the end of this session, you will be able to:
 - Use **distillation** (teacher to student fine-tuning) to get frontier-quality answers at small-model cost and latency.
 - **Operate** a production AI system with managed deployments, versioning, rollback, monitoring, content safety, and governance.
 
+<br/>
+
 ### 💬 Keep Learning with Copilot
 
-Try these prompts with GitHub Copilot to explore the topics from this session. Open Copilot Chat in VS Code (`Ctrl+Alt+I` on Windows or Linux, `Cmd+Shift+I` on Mac), paste a prompt, and see what you learn. Try connecting the [Microsoft Learn MCP Server](#-microsoft-learn-mcp-server) for the latest official documentation.
+Try these prompts with GitHub Copilot to explore the topics from this session. Open Copilot Chat in Visual Studio Code (`Ctrl+Alt+I` on Windows or Linux, `Cmd+Shift+I` on Mac), paste a prompt, and see what you learn. Try connecting the [Microsoft Learn MCP Server](#-microsoft-learn-mcp-server) for the latest official documentation.
 
 Use these as a starting point, or write your own:
 
@@ -105,9 +146,9 @@ Use these as a starting point, or write your own:
 
 The Microsoft Learn MCP Server gives your AI agent direct access to Microsoft's official documentation, providing grounded, up-to-date answers about the products and services covered in this session.
 
-**VS Code** one-click installation: 
+**Visual Studio Code** one-click installation:
 
-[![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_Microsoft_Learn_MCP-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://vscode.dev/redirect/mcp/install?name=microsoft-learn&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Flearn.microsoft.com%2Fapi%2Fmcp%22%7D)
+[![Install in Visual Studio Code](https://img.shields.io/badge/Visual_Studio_Code-Install_Microsoft_Learn_MCP-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://vscode.dev/redirect/mcp/install?name=microsoft-learn&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Flearn.microsoft.com%2Fapi%2Fmcp%22%7D)
 
 
 **GitHub Copilot CLI**: run this to install the Learn MCP Server as a plugin:
