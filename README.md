@@ -125,6 +125,7 @@ Use these as a starting point, or write your own:
 | [aka.ms/build/BRK230](https://aka.ms/build/BRK230) | Slides and recording for this session. |
 | [Microsoft Foundry documentation](https://learn.microsoft.com/azure/ai-foundry/) | Official docs for models, agents, evaluations, fine-tuning, and deployment. |
 | [https://aka.ms/build26-next-steps](https://aka.ms/build26-next-steps) | Explore lab and session repos to further your learning from Microsoft Build. |
+| [Watch the session recording](https://aka.ms/build26/BRK230/youtube) | Watch the recorded Microsoft Build session. |
 
 #### Related Build 2026 sessions
 
