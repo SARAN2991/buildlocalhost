@@ -7,7 +7,6 @@
 
 # [Microsoft Build 2026](https://build.microsoft.com)
 
-## BRK230: Build Smarter AI Systems in Foundry as Models and Costs Evolve
 
 ## Session Description
 
